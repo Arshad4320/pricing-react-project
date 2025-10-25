@@ -1,12 +1,11 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 
 const useInputField = (defaultValue) => {
-  const [filedValue, setFieldValue] = useState(defaultValue);
-  const handleOnChangeValue = (e) => {
-    setFieldValue(e.target.value);
+  const [value, setValue] = useState(defaultValue);
+  const handleOnChange = (e) => {
+    setValue(e.target.value);
   };
-  return [filedValue, handleOnChangeValue];
+  return [value, handleOnChange];
 };
 
 export default useInputField;
